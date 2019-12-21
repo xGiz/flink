@@ -96,7 +96,7 @@ public abstract class AbstractRecoverableWriterTest extends TestLogger {
 			Assert.assertTrue(fileContents.getValue().isEmpty());
 		}
 
-		// FIXME: May be failed on windows.
+		// TODO: Fix errors occurred on windows.
 		stream.closeForCommit().commit();
 
 		for (Map.Entry<Path, String> fileContents : getFileContentByPath(testDir).entrySet()) {
